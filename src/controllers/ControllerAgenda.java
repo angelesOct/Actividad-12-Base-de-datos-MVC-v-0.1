@@ -98,6 +98,9 @@ public class ControllerAgenda {
      */
     private void jbtn_anterior_actionPerformed() {
         System.out.println("Action del boton jbtn_anterior");
+        modelAgenda.moverAnteriorRegistro(); //se invoca al boton moverPrimerRegistro
+        viewAgenda.jtf_nombre.setText(modelAgenda.getNombre());//muestra el numbre en la vista
+        viewAgenda.jtf_email.setText(modelAgenda.getEmail()); //muestra el email en la vista
     }
 
     /**
@@ -115,7 +118,7 @@ public class ControllerAgenda {
      */
     private void jbtn_siguiente_actionPerformed() {
         System.out.println("Action del boton jbtn_siguiente");
-        modelAgenda.moverAnteriorRegistro(); //se invoca al boton moverPrimerRegistro
+        modelAgenda.moverSiguienteRegistro(); //se invoca al boton moverPrimerRegistro
         viewAgenda.jtf_nombre.setText(modelAgenda.getNombre());//muestra el numbre en la vista
         viewAgenda.jtf_email.setText(modelAgenda.getEmail()); //muestra el email en la vista
     }

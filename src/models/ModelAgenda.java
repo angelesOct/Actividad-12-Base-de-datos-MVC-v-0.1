@@ -91,9 +91,9 @@ public class ModelAgenda {
         System.out.print("Programa accion moverSiguienteRegistro");//verificar que la conexion MVC esta correcta
         try{             
             if(rs.isLast()==false) {                 
-                rs.first();                 
+                rs.next();                 
                 nombre = rs.getString("nombre");
-                email = rs.getString("email");
+                email = rs.getString("email");                            
             }         
         }catch(Exception err) {             
                 JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
@@ -110,15 +110,14 @@ public class ModelAgenda {
         System.out.print("Programa accion moverAnteriorRegistro");//verificar que la conexion MVC esta correcta
         try{             
             if(rs.isLast()==false) {                 
-                rs.next();                 
+                rs.previous();                 
                 nombre = rs.getString("nombre");
-                email = rs.getString("email");                            
+                email = rs.getString("email"); 
             }         
         }catch(Exception err) {             
                 JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
-        }  
-    }
-    
+        }       
+    }     
     /**
      * Método que realiza las siguiente acciones:
      * 1.- Moverse al ultimo registro
