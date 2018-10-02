@@ -69,7 +69,16 @@ public class ModelAgenda {
      * 3.- obtener el valor del email de rs y guardarlo en la variable email
      */
     public void moverPrimerRegistro(){
-        System.out.print("Programa accion moverPrimerRegistro");
+        System.out.print("Programa accion moverPrimerRegistro"); //verificar que la conexion MVC esta correcta
+        try{             
+            if(rs.isLast()==false) {                 
+                rs.first();                 
+                nombre = rs.getString("nombre");
+                email = rs.getString("email");
+            }         
+        }catch(Exception err) {             
+                JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
+        } 
     }
     
     /**
@@ -79,7 +88,7 @@ public class ModelAgenda {
      * 3.- obtener el valor del email de rs y guardarlo en la variable email
      */
     public void moverSiguienteRegistro(){
-        System.out.print("Programa accion moverSiguienteRegistro");
+        System.out.print("Programa accion moverSiguienteRegistro");//verificar que la conexion MVC esta correcta
     }
     
     /**
@@ -89,7 +98,7 @@ public class ModelAgenda {
      * 3.- obtener el valor del email de rs y guardarlo en la variable email
      */
     public void moverAnteriorRegistro(){
-        System.out.print("Programa accion moverAnteriorRegistro");
+        System.out.print("Programa accion moverAnteriorRegistro");//verificar que la conexion MVC esta correcta
     }
     
     /**
@@ -99,6 +108,6 @@ public class ModelAgenda {
      * 3.- obtener el valor del email de rs y guardarlo en la variable email
      */
     public void moverUltimoRegistro(){
-        System.out.print("Programa accion moverUltimoRegistro");
+        System.out.print("Programa accion moverUltimoRegistro");//verificar que la conexion MVC esta correcta
     }
 }
