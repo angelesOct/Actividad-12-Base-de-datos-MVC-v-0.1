@@ -126,5 +126,14 @@ public class ModelAgenda {
      */
     public void moverUltimoRegistro(){
         System.out.print("Programa accion moverUltimoRegistro");//verificar que la conexion MVC esta correcta
+        try{             
+            if(rs.isLast()==false) {                 
+                rs.last();                
+                nombre = rs.getString("nombre");
+                email = rs.getString("email");
+            }         
+        }catch(Exception err) {             
+                JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
+        }
     }
 }
