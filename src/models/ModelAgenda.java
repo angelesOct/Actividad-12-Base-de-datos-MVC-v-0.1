@@ -94,7 +94,11 @@ public class ModelAgenda {
                 rs.next();                 
                 nombre = rs.getString("nombre");
                 email = rs.getString("email");                            
-            }         
+            } 
+            else{
+                rs.previous();
+                JOptionPane.showMessageDialog(null,"ultimo registro");
+            }
         }catch(Exception err) {             
                 JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
         }
@@ -113,9 +117,12 @@ public class ModelAgenda {
                 rs.previous();                 
                 nombre = rs.getString("nombre");
                 email = rs.getString("email"); 
-            }         
+            } 
+            else{
+                rs.next(); 
+        }
         }catch(Exception err) {             
-                JOptionPane.showMessageDialog(null,"Error "+err.getMessage());         
+                JOptionPane.showMessageDialog(null,"primer registro");         
         }       
     }     
     /**
