@@ -9,10 +9,12 @@ CREATE TABLE contactos(
 )ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-INSERT INTO contactos (nombre, email) VALUES 
-('Dejah Thoris','dejah@barson.ma'), 
-('Jhon Carter','jhon@barson.ma'),
-('Carthoris Carter','carthoris@barson.ma');
+INSERT INTO `contactos` (`id_contacto`, `nombre`, `email`) VALUES
+(1, 'Diana Octaviano', 'diana.valeria201@gmail.com'),
+(2, 'Alexis Hermandez', 'Alexis@email.com'),
+(3, 'Estefania Garcia', 'fannygarcia@outlook.com')
+(4, 'Luisa', 'luisa@outlook.com');
+
 
 
 SELECT * FROM contactos;
